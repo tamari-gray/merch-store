@@ -1,0 +1,979 @@
+body,
+html,
+.App {
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ padding: 0;
+ background: rgb(255,128,255);
+background: radial-gradient(circle, rgba(255,128,255,1) 0%, rgba(172,44,172,1) 67%);
+ /* font-family: Arial, sans-serif; */
+ font-family: fortnite;
+ color: white;
+ overflow-y: hidden; /* Prevent vertical scrolling */
+  height: 100%; /* Ensure the body takes up the full height */
+  margin: 0; /* Remove default margin */
+}
+
+@font-face{
+  font-family: heading66;
+  src: url(../fonts/heading_now\HeadingNowTrial-66Bold.ttf);
+ }
+ @font-face{
+  font-family: heading67;
+  src: url(../fonts/heading_now\HeadingNowTrial-67ExtraboldItalic.ttf)
+ }
+ @font-face{
+  font-family: heading65;
+  src: url(../fonts/heading_now\HeadingNowTrial-65Medium.ttf)
+ }
+
+@font-face{
+ font-family: fortnite;
+ src: url(../fonts/fortnite_font.otf);
+ font-weight: bold;
+}
+
+a:link { 
+  text-decoration: none; 
+}
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
+
+
+
+nav,
+.nav-list {
+  font-family: heading66;
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between; /* Space items evenly */
+  align-items: center;
+  padding: 0px;
+  list-style: none;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.nav-item-page{
+  margin-left: 50px;
+}
+
+.nav-left {
+  display: flex;
+  flex: 0 0 35%; /* Take up 35% of the screen width */
+  justify-content: space-evenly;
+}
+
+.nav-gap {
+  flex: 0 0 35%; /* Take up 30% of the screen width */
+}
+
+.nav-right {
+  display: flex;
+  flex: 1; /* Take up the remaining space */
+  justify-content: space-evenly;
+}
+
+.nav-right-item-page{
+  display: flex;
+  flex: 1; /* Take up the remaining space */
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+.nav-items {
+  margin-right: 20px;
+  display: flex; /* Ensure items are aligned */
+  align-items: center; /* Vertically center the items */
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex; /* Use flexbox to align content inside the link */
+  align-items: center; /* Vertically center the content */
+}
+
+.nav-items img {
+  vertical-align: middle; /* Align icons and images to the middle */
+  height: 1em; /* Default size for all images */
+}
+
+.nav-items .avatar-image {
+  height: 2.5em; /* Larger size for avatar image */
+}
+
+.back-arrow{
+  width: 30px;
+}
+
+
+
+
+
+ 
+/* Main container holds both sections */
+.main-container {
+  display: flex;
+  height: 100vh;
+  padding: 5px 20px;
+  flex-direction: row;
+  justify-content: flex-start; /* Center indicators horizontally */
+
+}
+.mobile-section-view{
+    display: none;
+}
+
+/* Section 1 takes up 60% of the width */
+.section-1 {
+  flex: 0 0 50px; /* Section 1 (Indicators) takes 10% */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center indicators vertically */
+  justify-content: flex-start; /* Center indicators horizontally */
+  height: 100%;
+  padding-top: 350px;
+  padding-left: 10px;
+}
+
+.section-2 {
+  flex: 0 0 750px; /* Section 2 (Carousel) takes 50% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-3 {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-top: 60px; /* Space 150px from the top */
+
+}
+
+
+
+/* Carousel and Cards */
+.carousel-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-wrapper {
+  flex: 0 0 100%; 
+  overflow: hidden; /* Hide overflow to prevent overlap */
+  display: flex;
+  flex-direction: column; /* For vertical alignment of items */
+  align-items: center; /* Center the carousel horizontally */
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  scroll-snap-type: y mandatory; /* Vertical snapping */
+  gap: 59px; /* Space between items */
+  overflow-y: auto; 
+  scroll-padding-top: 200px; /* This adds the 200px snapping offset */
+  padding-top: 150px;
+  padding-bottom: 250px;
+}
+
+
+.carousel-item.active {
+  opacity: 1; /* Full opacity for active slide */
+  pointer-events: auto;
+}
+
+/* Inactive carousel item */
+.carousel-item {
+  opacity: 0.5; /* 50% opacity for inactive slides */
+  display: flex;
+  justify-content: flex-start;
+  gap: 36px;
+  align-items: center;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out;
+  flex-direction: row ;
+  scroll-snap-align: start;   
+  padding: 0 15px;
+  pointer-events: none; /* Disable clicking for non-active items */
+}
+
+/* Card item */
+.item-card {
+  width: 242px;
+  height: 550px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Image in card */
+.item-card img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.indicator-box {
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  padding: 10.5px;
+  border-radius: 8px; /* Optional: round the edges of the box */
+}
+
+.carousel-indicators {
+  display: flex;
+  flex-direction: column; /* Make the indicators stack vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-indicator {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 10px 0; /* Space between indicators */
+  transition: background 0.3s;
+}
+
+.carousel-indicator.active {
+  background: white;
+  width: 14px;
+  height: 14px;
+}
+
+/* On hover, slightly scale up the card */
+.item-card:hover {
+  transform: scale(1.025);
+  box-shadow: 0 10px 20px rgb(255, 255, 255), 0 0 0 3px rgb(255, 255, 255);
+  /* margin-top: 10px; */
+} 
+
+/* Hide vertical scrollbar */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.text-overlay {
+  position: absolute;
+  left: 10%;
+  color: white;
+  display: flex;
+  gap: 5px;
+  z-index: 10;
+  opacity: 1;
+}
+
+.icon-image {
+  width: 30px;
+  height: 30px;
+}
+
+.top-text {
+  bottom: 12.5%; /* Position the top text */
+}
+
+.bottom-text {
+  bottom: 6.25%; /* Position the bottom text */
+}
+
+
+
+
+
+
+
+
+
+
+
+.price-wrapper{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+#canvas-container {
+  width: 60vh;   /* Example width, adjust as needed */
+  height: 75vh;  /* Example height, adjust as needed */
+  margin: 0 auto; /* Centers the container horizontally */
+  position: relative;  /* Keeps the canvas within the container */
+  background: transparent;             /* Align the canvas to the left of the container */
+
+
+}
+
+#three-canvas {
+  display: block;         /* Removes extra space around the canvas */
+  width: 100%;            /* Make the canvas fill the container width */
+  height: 100%;           /* Make the canvas fill the container height */
+  position: absolute;     /* Align canvas relative to the container */
+  top: 0;                 /* Align the canvas to the top of the container */
+  left: 0;   
+  background: transparent;     
+  display: block;
+  object-fit: contain;         /* Align the canvas to the left of the container */
+}
+
+#three-canvas-2{
+  display: block;         /* Removes extra space around the canvas */
+  width: 100%;            /* Make the canvas fill the container width */
+  height: 100%;           /* Make the canvas fill the container height */
+  position: absolute;     /* Align canvas relative to the container */
+  top: 0;                 /* Align the canvas to the top of the container */
+  left: 0;   
+  background: transparent;     
+  display: block;
+  object-fit: contain;         /* Align the canvas to the left of the container */
+}
+
+
+.image-container-large {
+ margin-bottom: 20px;
+}
+
+.image-container-large img {
+ width: 200px;
+ height: 400px;
+ display: block;
+ margin: 0 auto;
+}
+
+.emote-button {
+  position: fixed;
+  bottom: 75px;
+  right: 150px;
+  margin-right: 0px;
+  z-index: 1000;
+ background-color: rgba(172,44,172,1);
+ color: white;
+ padding: 5px 20px;
+ border: 4px solid white;
+ border-radius: 5px;
+ cursor: pointer;
+ font-family: heading66;
+ font-size: 20px;
+ transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+ width: 220px;
+ /* margin-right: 10vw; */
+}
+
+.emote-button:hover {
+  background-color: white; /* Background color on hover */
+  color: purple; /* Text color on hover */
+}
+
+.material-symbols-outlined {
+ font-variation-settings:
+ 'FILL' 0,
+ 'wght' 400,
+ 'GRAD' 0,
+ 'opsz' 24
+}
+
+@media (min-width: 768px) {
+ .image-card {
+  width: 28%;
+ }
+}
+
+
+.info-container {
+ display: flex;
+ flex-direction: column;
+ flex-wrap: nowrap;
+ width: 100%;
+ justify-content: space-evenly;
+ padding: 100px;
+}
+
+
+
+
+
+
+
+
+
+/* item page */
+.item-page{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Reset specific for .App on the second page */
+.App h1,
+.App h4,
+.App p,
+.App {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.selected-item-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 50px;
+ }
+
+.info-section{
+  flex: 0 0 680px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-left: 100px;
+}
+
+
+.item-options-container{
+  margin-top: 65px;
+}
+
+.item-outfit-title{
+  font-family: heading66;
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+  line-height: 0.7; 
+}
+
+.item-title{
+  font-family: heading67;
+  font-size: 48px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.heading-now-p{
+  font-family: heading65;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.heading-now-p-65{
+  font-family: heading65;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+  margin: 0;
+  padding:5px
+}
+
+.heading-now-p-16{
+  font-family: heading66;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+  margin: 0;
+  padding:10px
+}
+
+.mini-cards-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.mini-card{
+  background-color: rgba(0, 0, 0, 0.5); /* 50% transparent grey */
+  padding: 5px;
+  border-radius: 10px; /* Optional rounded corners */
+  font-size: 16pt;
+}
+
+.item-customise-heading{
+  font-family: heading66;
+  font-size: 20px;
+}
+
+.color-cards-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 6px;
+  margin: 10px 0;
+}
+
+.color-card{
+  display: flex;
+  object-fit: cover;
+  border: 0px solid transparent; /* Initially, make the border transparent */
+  border-radius: 10px; /* Keep the border-radius */
+  border: 1px solid transparent; /* Initial transparent border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Initial shadow for depth */
+}
+
+.color-card img {
+  width: 89px;
+  height: 155px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.color-card:hover{
+  border-color: transparent; /* Keep the border transparent on hover */
+  transform: scale(1.025); /* Slightly scale up the card on hover */
+  box-shadow: 0 10px 20px rgb(255, 255, 255), 0 0 0 5px rgb(255, 255, 255); /* Deeper shadow + border effect */
+  border: 0px solid transparent; /* Ensure the border remains transparent */
+}
+
+.color-card.selected {
+  border-color: transparent; /* Keep the border transparent on hover */
+  transform: scale(1.025); /* Slightly scale up the card on hover */
+  box-shadow: 0 10px 20px rgb(255, 255, 255), 0 0 0 5px rgb(255, 255, 255); /* Deeper shadow + border effect */
+  border: 0px solid transparent; /* Ensure the border remains transparent */
+}
+
+
+/* size choosing */
+
+.mini-cards-wrapper-size{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.mini-card-size{
+  background-color: rgba(0, 0, 0, 0.5); /* 50% transparent grey */
+  padding: 5px 13px;
+  border-radius: 10px; /* Optional rounded corners */
+  font-size: 16px;
+  font-family: heading66;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  cursor: pointer;
+
+}
+
+.mini-card-size:hover {
+  background-color: black; /* Change background color to black on hover */
+}
+
+.mini-card-size.selected {
+  background-color: black; /* Background turns black when selected */
+}
+
+.quantity-container {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5px; /* Optional: round the edges */
+  padding: 5px;
+  background-color: #00000079; /* Background color for the container */
+}
+
+
+/* quantity choosing */
+.item-quantity-container{
+  margin-top: 10px;
+}
+
+.quantity-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.quantity-number {
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+
+/* item buttons */
+
+.item-buttons-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 564px;
+}
+
+.cart-button {
+  width: 100%;  
+  margin: 12px 0px 10px 0px;  
+  background-color: transparent; /* Make the button background transparent */
+  border: 4px solid white; /* Add a white border */
+  color: white; /* Set text color to white */
+  padding: 10px 20px; /* Add padding for better appearance */
+  border-radius: 5px; /* Optional: round the corners */
+  cursor: pointer; /* Make the cursor a pointer on hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+  font-family: heading66;
+  font-size: 20px;
+}
+
+.double-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.purchase-button{
+  background-color: rgba(255, 255, 255, 0.747); /* Make the button background transparent */
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; 
+  font-family: heading66;
+  font-size: 20px;
+  width: 70%;
+
+}
+
+#emote-2{
+  background-color: transparent; /* Make the button background transparent */
+  border: 4px solid white; /* Add a white border */
+  color: white; /* Set text color to white */
+  padding: 10px 20px; /* Add padding for better appearance */
+  border-radius: 5px; /* Optional: round the corners */
+  cursor: pointer; /* Make the cursor a pointer on hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+  font-family: heading66;
+  font-size: 20px;
+  width: 30%;
+ margin-right: 0;
+}
+
+.small-text{
+  font-family: heading65;
+  font-size: 20px;
+}
+
+.item-terms-container{
+  margin-top: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* TAblet Adjustments */
+@media (max-width: 1300px) {
+  .main-container {
+    display: flex;
+    flex-direction: row; /* Keep sections next to each other */
+    justify-content: flex-start;
+    align-items: flex-start; /* Align sections at the top */
+    padding: 5px ;
+  }
+
+  .nav-right li:first-child {
+    display: none;
+  }
+
+  .nav-left {
+    flex: 0 0 80%;
+  }
+
+  .nav-left .about{
+    display: none;
+  }
+
+  .nav-gap {
+    flex: 0 0 0%;
+  }
+
+  .nav-right {
+    flex: 1 0 0;
+  }
+
+  .mobile-section-view{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Section 1 (carousel indicators) adjustments */
+  .section-1 {
+    flex: 0 0 27px; /* Smaller space for indicators */
+    padding-top: 20vh;
+    padding-left: 0px;
+    padding-right: 5px;
+    z-index: 3;
+    align-items: flex-end;
+  }
+
+  .indicator-box{
+    width: auto;
+    height: auto;
+    padding: 8px 8px;
+  }
+
+  .carousel-indicator{
+    width: 6px;
+    height: 6px;
+    margin: 5px 0px;
+  }
+
+  .carousel-indicator.active{
+      width: 12px;
+      height: 12px;
+  }
+
+  /* Section 2 (Carousel) adjustments */
+  .section-2 {
+    height: 100vh;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 3;
+    justify-content: flex-start;
+    flex: 0 0 508px;
+  }
+
+  /* Adjusting Carousel Container */
+  .carousel-wrapper {
+    height: 150vh;
+    overflow-y: scroll;
+    background-color: transparent; 
+    align-items: flex-start;
+  }
+
+  /* Hide items that are above the 50vh */
+  .carousel-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50vh;
+    z-index: 2;
+    pointer-events: none;
+    background-color: transparent; 
+  }
+
+  .carousel{
+    scroll-padding-top: 45vh;
+    padding-top: 45vh;
+    gap: 16px;
+    padding-bottom: 66vh;
+  }
+
+  /* Carousel Items adjustments for mobile */
+  .carousel-item {
+    opacity: 0.5; /* Make inactive items semi-transparent */
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+    background-color: transparent; 
+    gap: 14px;
+  }
+
+  /* Active carousel item */
+  .carousel-item.active {
+    opacity: 1; /* Fully visible for active items */
+  }
+
+  
+
+  /* Adjust item card size */
+  .item-card {
+    width: auto;
+    height: auto;
+  }
+
+  .item-card img {
+    max-width: 25vw;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .icon-image{
+    width: 14px;
+  }
+
+  .text-overlay{
+    left: 5%;
+  }
+
+  .top-text{
+    bottom: 12.5%;
+  }
+  .bottom-text{
+    bottom: 4.5%;
+  }
+
+  .small-text{
+    font-size: 14px;
+  }
+
+
+
+  /* Section 3 (Emote section) moves behind carousel */
+  .section-3 {
+    z-index: 1; /* Place emote section behind */
+    position: absolute; /* Position relative to the carousel */
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh; /* Ensure emote section takes full height */
+  }
+
+  /* Canvas inside Section 3 */
+  #canvas-container {
+    width: 100%; /* Ensure canvas takes full width */
+    height: 100vh; /* Make the canvas full height */
+    display: flex;
+    justify-content: center;
+  }
+
+  #three-canvas {
+    width: 66%;
+    height: 66%;
+    position: relative;
+  }
+
+  .emote-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin-right: 0px;
+    z-index: 1000;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .carousel{
+    padding-bottom: 75vh;
+  }
+
+  .carousel-item{
+    padding: 0 0;
+  }
+
+  .carousel-wrapper::before {
+    display: none; /* Temporarily hide it to test the scrolling */
+  }
+
+  .nav-items a{
+    font-size: 16px;
+  }
+
+  .nav-right{
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-left{
+    flex: 0 0 20%;
+  }
+
+  .nav-left li:not(:first-child) {
+    display: none;
+  }
+
+  .nav-right li:first-child {
+    display: block;
+  }
+
+   .mobile-section-view{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 2vw;
+  }
+
+  .item-card img {
+    max-width: 25vw;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+}
+
+@media (max-width: 350px) {
+
+  .carousel{
+    padding-bottom: 80vh;
+  }
+  
+
+  .mobile-section-view{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   padding-left: 0;
+ }
+
+ .carousel-item{
+   padding: 0px 0px;
+ }
+
+ .item-card img {
+   max-width: 93px;
+   max-width: 25vw;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 10px;
+ }
+
+}
+
+@media (max-width: 330px) {
+
+  .carousel{
+    padding-bottom: 85vh;
+  }
+  
+
+}

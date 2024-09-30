@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://kit.fontawesome.com/60dae3742b.js" crossorigin="anonymous"></script>
+  <title>Tam</title>
+ </head>
+ <body>
+  <div class="App item-page">
+    <nav>
+      <ul class="nav-list">
+        <div class="nav-item-page">
+          <li class="back-arrow"><a href="./index.html"><img src="./back_arrow.png" alt="menu"></a></li>
+        </div>
+        <div class="nav-gap"></div>
+        <div class="nav-right-item-page">
+          <li class="nav-items"><a href="#">:TTVKawaiiFreak97</a></li>
+          <li class="nav-items"><a href="#"><img src="./trolley.png" alt="menu" class="avatar-image"></a></li>
+        </div>
+      </ul>
+    </nav>
+    <div class="selected-item-container">
+      <section class="info-section">
+       <div class="item-title-container">
+        <div class="item-outfit-title"></div>
+        <p class="item-title"></p>
+        <p class="heading-now-p">These items may work in:</p>
+        <div class="mini-cards-wrapper">
+          <div class="mini-card"> 
+           <p class="heading-now-p-65">Getting dubs</p> 
+          </div>
+          <div class="mini-card"> 
+            <p class="heading-now-p-65">Getting dubs</p> 
+          </div>
+          <div class="mini-card"> 
+            <p class="heading-now-p-65">Getting dubs</p>
+           </div>
+        </div>
+       </div> <!-- Correct closing for item-title-container -->
+
+       <div class="item-options-container">
+          <p class="item-customise-heading">Color</p>
+          <div class="color-cards-wrapper">
+            <div class="color-card">
+              <img src="./lana-placeholder.png" >
+            </div>
+            <div class="color-card">
+              <img src="./lana-placeholder.png" >
+            </div>
+            <div class="color-card">
+              <img src="./lana-placeholder.png" >
+            </div>
+          </div>
+  
+        <div class="item-size-container">
+          <p class="item-customise-heading">Size</p>
+          <div class="mini-cards-wrapper-size">
+            <div class="mini-card-size"> <p class="heading-now-p-16">S</p> </div>
+            <div class="mini-card-size"> <p class="heading-now-p-16">M</p> </div>
+            <div class="mini-card-size"> <p class="heading-now-p-16">L</p> </div>
+            <div class="mini-card-size"> <p class="heading-now-p-16">XL</p> </div>
+            <div class="mini-card-size"> <p class="heading-now-p-16">XXL</p> </div>
+          </div>
+        </div>
+  
+        <div class="item-quantity-container">
+          <p class="item-customise-heading">Quantity</p>
+          <div class="quantity-container">
+            <button class="quantity-btn" id="decrease">-</button>
+            <span class="quantity-number" id="quantity">1</span>
+            <button class="quantity-btn" id="increase">+</button>
+          </div>
+        </div>
+  
+        <div class="item-buttons-wrapper">
+          <button class="cart-button">Add to cart</button>
+         <div class="double-button">
+            <button class="purchase-button">Purchase</button>
+            <button class="emote-button-2" id="emote-2">Emote</button>
+          </div>
+        </div>
+  
+        <div class="item-terms-container">
+         <p class="small-text">These cosmetics grant insane competitive advantage. All cosmetics
+          are usable in all experiences. For more details on cosmetic variations,
+          see your favourite streamers chat!</p>
+        </div>  
+       </div> 
+       
+      </section>
+      <section class="emote-section">
+        <div id="canvas-container">
+          <canvas id="three-canvas-2"></canvas>
+        </div>
+      </section>
+  </div>
+  
+  </div>
+  <script type="module" src="./src/js/item_page.js"></script>
+ 
+ </body>
+</html>

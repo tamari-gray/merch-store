@@ -1,0 +1,242 @@
+{
+  "merch": [
+    {
+      "id": 1,
+      "title": "Kawaiifreak97",
+      "vendor": "Kawaiifreak97",
+      "price": "49.99",
+      "image": "./lana-placeholder.png",
+      "variants": [
+        {
+          "id": 101,
+          "title": "Small",
+          "available": true
+        },
+        {
+          "id": 102,
+          "title": "Medium",
+          "available": true
+        },
+        {
+          "id": 103,
+          "title": "Large",
+          "available": false
+        },
+        {
+          "id": 104,
+          "title": "XL",
+          "available": true
+        },
+        {
+          "id": 105,
+          "title": "XXL",
+          "available": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Azulaspurp",
+      "vendor": "Azulaspurp",
+      "price": "69.99",
+      "image": "./lana-placeholder.png",
+      "variants": [
+        {
+          "id": 201,
+          "title": "Small",
+          "available": true
+        },
+        {
+          "id": 202,
+          "title": "Medium",
+          "available": false
+        },
+        {
+          "id": 203,
+          "title": "Large",
+          "available": true
+        },
+        {
+          "id": 204,
+          "title": "XL",
+          "available": false
+        },
+        {
+          "id": 205,
+          "title": "XXL",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Karvey",
+      "vendor": "Karvey",
+      "price": "49.99",
+      "image": "./lana-placeholder.png",
+      "variants": [
+        {
+          "id": 301,
+          "title": "Small",
+          "available": true
+        },
+        {
+          "id": 302,
+          "title": "Medium",
+          "available": true
+        },
+        {
+          "id": 303,
+          "title": "Large",
+          "available": false
+        },
+        {
+          "id": 304,
+          "title": "XL",
+          "available": true
+        },
+        {
+          "id": 305,
+          "title": "XXL",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Valmee",
+      "vendor": "Valmee",
+      "price": "49.99",
+      "image": "./lana-placeholder.png",
+      "variants": [
+        {
+          "id": 401,
+          "title": "Small",
+          "available": true
+        },
+        {
+          "id": 402,
+          "title": "Medium",
+          "available": false
+        },
+        {
+          "id": 403,
+          "title": "Large",
+          "available": true
+        },
+        {
+          "id": 404,
+          "title": "XL",
+          "available": true
+        },
+        {
+          "id": 405,
+          "title": "XXL",
+          "available": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Ray In the city",
+      "vendor": "Ray In the city",
+      "price": "49.99",
+      "image": "./lana-placeholder.png",
+      "variants": [
+        {
+          "id": 501,
+          "title": "Small",
+          "available": false
+        },
+        {
+          "id": 502,
+          "title": "Medium",
+          "available": true
+        },
+        {
+          "id": 503,
+          "title": "Large",
+          "available": true
+        },
+        {
+          "id": 504,
+          "title": "XL",
+          "available": true
+        },
+        {
+          "id": 505,
+          "title": "XXL",
+          "available": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Faze kawaii",
+      "vendor": "Faze kawaii",
+      "price": "49.99",
+      "image": "./lana-placeholder.png",
+      "variants": [
+        {
+          "id": 601,
+          "title": "Small",
+          "available": true
+        },
+        {
+          "id": 602,
+          "title": "Medium",
+          "available": false
+        },
+        {
+          "id": 603,
+          "title": "Large",
+          "available": true
+        },
+        {
+          "id": 604,
+          "title": "XL",
+          "available": true
+        },
+        {
+          "id": 605,
+          "title": "XXL",
+          "available": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Faze kawaii",
+      "vendor": "Faze kawaii",
+      "price": "49.99",
+      "image": "./lana-placeholder.png",
+      "variants": [
+        {
+          "id": 701,
+          "title": "Small",
+          "available": true
+        },
+        {
+          "id": 702,
+          "title": "Medium",
+          "available": true
+        },
+        {
+          "id": 703,
+          "title": "Large",
+          "available": true
+        },
+        {
+          "id": 704,
+          "title": "XL",
+          "available": false
+        },
+        {
+          "id": 705,
+          "title": "XXL",
+          "available": false
+        }
+      ]
+    }
+  ]
+}
